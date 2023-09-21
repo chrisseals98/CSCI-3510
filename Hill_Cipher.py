@@ -18,12 +18,12 @@ def makeKeyMatrix(key, size):
         matrix = np.append(matrix, index)
 
     matrix = np.reshape(matrix, (size,size))
-    print(matrix)
     return matrix
 
 def encrypt(message, matrixSize, key):
     """
     function encrypts the message string using hill cipher with the key param
+    :return: encrypted string
     """
     # initialized junk
     numList = []
@@ -61,8 +61,7 @@ def encrypt(message, matrixSize, key):
 def decrypt(encodedMessage, matrixSize, key):
     """
     function decrypts the encoded string using hill cipher (modular inverse)
-    :param encodedMessage:
-    :return: decodedChars
+    :return: decrypted string
     """
     # initialized bs
     numList = []
@@ -103,9 +102,9 @@ def Menu():
             message = input("\nEnter your message: ").lower().replace(" ", "")
             matrixSize = int(input("Enter the size of the key matrix: "))
             key = input("Enter your key: ").lower().replace(" ", "")
-            key3by3 = "monarchyz"
-            key4by4 = "cdbfbechdvgiacdb"
-            key5by5 = "bcdefcdefbdefbcefbcdfbcde"
+            #key3by3 = "monarchyz"
+            #key4by4 = "cdbfbechdvgiacdb"
+            #key5by5 = "bcdefcdefbdefbcefbcdfbcde"
             codedMessage = encrypt(message, matrixSize, key)
             print("\nYour encrypted message: {}".format(codedMessage) )
 
