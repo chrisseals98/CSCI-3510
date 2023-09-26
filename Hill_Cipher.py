@@ -108,13 +108,14 @@ def Menu():
             codedMessage = encrypt(message, matrixSize, key)
             print("\nYour encrypted message: {}".format(codedMessage) )
 
+        #Success is the ability to go from one failure to another with no loss of enthusiasm
         elif selection == "2":
             message = input("\nEnter your message: ").lower().replace(" ", "")
             matrixSize = int(input("Enter the size of the key matrix: "))
             key = input("Enter your key: ").lower().replace(" ", "")
-            key3by3 = "monarchyz"
-            key4by4 = "cdbfbechdvgiacdb"
-            key5by5 = "bcdefcdefbdefbcefbcdfbcde"
+            #key3by3 = "monarchyz"
+            #key4by4 = "cdbfbechdvgiacdb"
+            #key5by5 = "bcdefcdefbdefbcefbcdfbcde"
             decodedMessage = decrypt(message, matrixSize, key)
             print("\nYour decrypted message: {}".format(decodedMessage))
 

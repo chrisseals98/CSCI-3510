@@ -43,8 +43,8 @@ def strEncrypt(usrStr):
     for i in indList:
         col = unicodeDF['code']
         coList.append(col[i])
-    print(coList)
     newcoList = encrypt(coList)
+    print(newcoList)
 
     for co in newcoList:
         newindList.append(unicodeDF[unicodeDF['code'] == co].index[0])
@@ -83,8 +83,8 @@ def strDecrypt(encryptedStr):
     for i in indList:
         col = unicodeDF['code']
         coList.append(col[i])
-    print(coList)
     newcoList = decrypt(coList)
+    print(newcoList)
 
     for co in newcoList:
         newindList.append(unicodeDF[unicodeDF['code'] == co].index[0])
@@ -126,7 +126,7 @@ if __name__ == '__main__':
     print(eString)
     print("Decrypted string:")
     print(strDecrypt(eString))
-
+#On 10 May 1940, Winston Churchill became Prime Minister of the United Kingdom
 """
 current issues:
 * no user input for what amount of ceasar shift to use
